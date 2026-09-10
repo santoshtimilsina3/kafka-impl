@@ -1,4 +1,4 @@
-package com.example.kafkaproducerpartioning.kafka;
+package com.example.kafkaproducerpartioning.producer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
