@@ -1,0 +1,10 @@
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      # We use String for the Key (orderId) and JSON for the Value (the event)
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+  application:
+    name: kafka-producer-partioning
