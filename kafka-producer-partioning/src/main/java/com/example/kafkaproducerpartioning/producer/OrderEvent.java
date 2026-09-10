@@ -1,4 +1,4 @@
-package com.example.kafkaproducerpartioning.kafka;
+package com.example.kafkaproducerpartioning.producer;
 
 public record OrderEvent(
     String orderId,
