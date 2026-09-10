@@ -1,4 +1,4 @@
-package com.example.kafkaproducerpartioning.kafka;
+package com.example.kafkaproducerpartioning.producer;
 
 
 import org.springframework.web.bind.annotation.PostMapping;
