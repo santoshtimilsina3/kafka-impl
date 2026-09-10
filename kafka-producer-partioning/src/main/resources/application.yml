@@ -1,4 +1,7 @@
 spring:
+  application:
+    name: kafka-producer-partioning
+
   kafka:
     producer:
       bootstrap-servers: localhost:9092
@@ -6,5 +9,13 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
-  application:
-    name: kafka-producer-partioning
+
+    consumer:
+      bootstrap-servers: localhost:9092
+      # The default group-id (this will be overridden by the @KafkaListener groupId anyway)
+      group-id: default-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        # This tells Jackson it's safe to deserialize our custom Java classes
+        spring.json.trusted.packages: "*"
